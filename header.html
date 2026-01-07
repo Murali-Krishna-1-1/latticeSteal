@@ -1,0 +1,97 @@
+<!-- ================= HEADER ================= -->
+<header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-24">
+
+      <!-- LOGO (LEFT) -->
+      <a href="index.html" class="flex items-center">
+        <img
+          src="/assets/logo.png"
+          alt="Lattice Steel Logo"
+          class="h-16 md:h-18"
+        >
+      </a>
+
+      <!-- NAV (RIGHT) -->
+      <nav class="hidden md:flex items-center space-x-10 font-medium text-gray-800">
+
+        <!-- HOME -->
+        <a href="index.html" class="hover:text-blue-900 transition">
+          Home
+        </a>
+
+        <!-- SERVICES DROPDOWN -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 hover:text-blue-900 transition">
+            Services
+            <svg class="w-4 h-4 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <!-- DROPDOWN BOX -->
+          <div class="absolute right-0 top-full mt-4 w-80 bg-white shadow-xl rounded-lg
+                      opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                      transition-all duration-200">
+            <div class="p-6 space-y-4">
+
+              <a href="structural-steel.html" class="block hover:bg-gray-100 rounded-lg p-3">
+                <h4 class="font-semibold text-blue-900">Structural Steel Detailing</h4>
+                <p class="text-sm text-gray-600">
+                  Primary framing, columns, beams, and bracing
+                </p>
+              </a>
+
+              <a href="miscellaneous-steel-detailing.html" class="block hover:bg-gray-100 rounded-lg p-3">
+                <h4 class="font-semibold text-blue-900">Miscellaneous Steel Detailing</h4>
+                <p class="text-sm text-gray-600">
+                  Stairs, platforms, handrails, and embeds
+                </p>
+              </a>
+
+              <a href="connection-detailing.html" class="block hover:bg-gray-100 rounded-lg p-3">
+                <h4 class="font-semibold text-blue-900">Connection Detailing</h4>
+                <p class="text-sm text-gray-600">
+                  AISC-compliant steel connections
+                </p>
+              </a>
+
+              <a href="estimation-mto.html" class="block hover:bg-gray-100 rounded-lg p-3">
+                <h4 class="font-semibold text-blue-900">Estimation & MTO</h4>
+                <p class="text-sm text-gray-600">
+                  Model-based quantity take-offs
+                </p>
+              </a>
+
+              <a href="qa-shop-drawing-review.html" class="block hover:bg-gray-100 rounded-lg p-3">
+                <h4 class="font-semibold text-blue-900">QA & Shop Drawing Review</h4>
+                <p class="text-sm text-gray-600">
+                  Independent quality assurance reviews
+                </p>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ABOUT -->
+        <a href="about.html" class="hover:text-blue-900 transition">
+          About
+        </a>
+
+        <!-- CTA -->
+        <a href="request-quote.html"
+          class="bg-blue-900 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">
+          Request a Quote
+        </a>
+
+      </nav>
+
+      <!-- MOBILE PLACEHOLDER -->
+      <div class="md:hidden text-gray-500 text-sm">
+        Menu
+      </div>
+
+    </div>
+  </div>
+</header>

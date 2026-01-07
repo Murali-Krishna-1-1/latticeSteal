@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connection Detailing | Lattice Steel</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Iconify Icons -->
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- ================= HEADER ================= -->
+<div id="header"></div>
+
+<!-- ================= HERO ================= -->
+<section class="pt-28 bg-cover bg-center"
+  style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80')">
+  <div class="bg-gradient-to-r from-black/80 via-black/50 to-black/80">
+    <div class="max-w-6xl mx-auto px-6 py-24 text-white">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        Connection Detailing
+      </h1>
+      <p class="text-lg max-w-4xl">
+        A disciplined, data-driven approach to steel connection detailing that
+        ensures structural integrity, constructability, and AISC compliance in
+        Tekla Structures and SDS/2.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTRO ================= -->
+<section class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold text-blue-900 mb-6">
+    Our Approach to Connection Detailing
+  </h2>
+  <p class="text-lg text-gray-700 max-w-5xl">
+    At Lattice Steel, connection detailing is treated as a controlled technical
+    process, not a template-driven task. Each connection is developed only after
+    validating design inputs, calculation data, and fabrication requirements to
+    ensure accuracy and constructability.
+  </p>
+</section>
+
+<!-- ================= THREE DATA STREAMS ================= -->
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-blue-900 mb-12">
+      Three Key Data Inputs
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- EOR -->
+      <div class="bg-white p-8 rounded-lg shadow">
+        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:account-tie"></span>
+        <h3 class="text-xl font-semibold mb-3">Engineer of Record (EOR)</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Reaction loads (shear, moment, axial)</li>
+          <li>• Governing design codes and criteria</li>
+          <li>• Standard connection details</li>
+          <li>• Material grade requirements</li>
+        </ul>
+      </div>
+
+      <!-- Connection Engineer -->
+      <div class="bg-white p-8 rounded-lg shadow">
+        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:calculator-variant-outline"></span>
+        <h3 class="text-xl font-semibold mb-3">Connection Engineer</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Design calculation packages</li>
+          <li>• Plate sizes, thicknesses, and geometry</li>
+          <li>• Weld sizes and bolt strengths</li>
+          <li>• Stiffeners, doublers, and continuity plates</li>
+        </ul>
+      </div>
+
+      <!-- Fabricator -->
+      <div class="bg-white p-8 rounded-lg shadow">
+        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:factory"></span>
+        <h3 class="text-xl font-semibold mb-3">Fabricator Preferences</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Preferred bolt sizes and stock</li>
+          <li>• Shop equipment and CNC constraints</li>
+          <li>• Shipping and handling limitations</li>
+          <li>• Field erection clearances</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODEL APPLICATION ================= -->
+<section class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold text-blue-900 mb-12">
+    Application in the 3D Model
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-10">
+
+    <div class="bg-white p-8 rounded-lg shadow border-l-4 border-blue-900">
+      <h3 class="text-xl font-semibold mb-3">Load Verification</h3>
+      <p class="text-gray-700">
+        Each modeled connection is verified against EOR reactions or connection
+        engineer calculations to ensure correct load transfer.
+      </p>
+    </div>
+
+    <div class="bg-white p-8 rounded-lg shadow border-l-4 border-blue-900">
+      <h3 class="text-xl font-semibold mb-3">Clash & Clearance Checks</h3>
+      <p class="text-gray-700">
+        Connections are reviewed for clashes with adjacent members, MEP systems,
+        and architectural finishes during early modeling stages.
+      </p>
+    </div>
+
+    <div class="bg-white p-8 rounded-lg shadow border-l-4 border-blue-900">
+      <h3 class="text-xl font-semibold mb-3">Technical RFIs</h3>
+      <p class="text-gray-700">
+        When inconsistencies are identified, clear RFIs are prepared with
+        annotated model views before fabrication begins.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SUMMARY TABLE ================= -->
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-blue-900 mb-10">
+      Data Integration Summary
+    </h2>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-gray-300 bg-white">
+        <thead class="bg-blue-900 text-white">
+          <tr>
+            <th class="px-6 py-4 text-left">Input Source</th>
+            <th class="px-6 py-4 text-left">Used For</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="border-t">
+            <td class="px-6 py-4 font-semibold">Engineer of Record</td>
+            <td class="px-6 py-4">Reaction loads and design criteria</td>
+          </tr>
+          <tr class="border-t bg-gray-50">
+            <td class="px-6 py-4 font-semibold">Connection Engineer</td>
+            <td class="px-6 py-4">Connection design and strength verification</td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-6 py-4 font-semibold">Fabricator</td>
+            <td class="px-6 py-4">Shop standards and erection constraints</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="bg-gray-100 py-16">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-blue-900">
+      Need Connection Detailing Support?
+    </h2>
+    <p class="mt-4 text-lg">
+      Share your reactions, connection calculations, or project drawings.
+      Our team will review and respond within one business day.
+    </p>
+
+    <a href="request-quote.html"
+      class="inline-block mt-8 bg-blue-900 text-white px-10 py-3 rounded-lg text-lg font-semibold hover:bg-blue-800 transition">
+      Request a Quote
+    </a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<div id="footer"></div>
+
+<!-- ================= LOAD HEADER & FOOTER ================= -->
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header").innerHTML = data);
+
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+</body>
+</html>
