@@ -1,290 +1,443 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Primary Meta Tags -->
-  <title>QA & Shop Drawing Review Services | Lattice Steel - Independent Quality Assurance</title>
-  <meta name="title" content="QA & Shop Drawing Review Services | Lattice Steel - Independent Quality Assurance" />
-  <meta name="description" content="Independent QA and shop drawing review services for steel fabricators and third-party detailers. Identify missing dimensions, coordination issues, and constructability risks before fabrication." />
-  <meta name="keywords" content="shop drawing review, QA review, steel drawing review, quality assurance, drawing check, fabrication review, steel QA, independent review, drawing coordination, AISC review, constructability review" />
+  <title>QA & Shop Drawing Review | Lattice Steel</title>
+  <meta name="title" content="QA & Shop Drawing Review Services | Lattice Steel" />
+  <meta name="description"
+    content="Independent QA and shop drawing review services for steel fabricators. We identify missing dimensions, coordination issues, and constructability risks." />
+  <meta name="keywords"
+    content="shop drawing review, QA review, quality assurance, steel detailing check, Bluebeam review" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://latticesteel.com/qa-shop-drawing-review.html" />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://latticesteel.com/qa-shop-drawing-review.html" />
-  <meta property="og:title" content="QA & Shop Drawing Review Services | Lattice Steel" />
-  <meta property="og:description" content="Independent QA and shop drawing review services that identify issues before fabrication, reducing RFIs and shop interruptions." />
+  <meta property="og:title" content="QA & Shop Drawing Review | Lattice Steel" />
+  <meta property="og:description" content="Independent QA services to prevent shop errors and field delays." />
   <meta property="og:image" content="https://latticesteel.com/assets/logo.png" />
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://latticesteel.com/qa-shop-drawing-review.html" />
-  <meta property="twitter:title" content="QA & Shop Drawing Review Services | Lattice Steel" />
-  <meta property="twitter:description" content="Independent QA and shop drawing review services that identify issues before fabrication, reducing RFIs and shop interruptions." />
-  <meta property="twitter:image" content="https://latticesteel.com/assets/logo.png" />
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/logo.png" />
-  
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "QA and Shop Drawing Review",
-    "provider": {
-      "@type": "Organization",
-      "name": "Lattice Steel"
-    },
-    "description": "Independent quality assurance reviews that identify missing information, coordination issues, and constructability risks before fabrication."
-  }
-  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Custom Styles -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-    .smooth-scroll { scroll-behavior: smooth; }
-    .fade-in { animation: fadeIn 0.6s ease-in; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
-  </style>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            dark: {
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            },
+            primary: {
+              400: '#38BDF8',
+              500: '#0EA5E9',
+              600: '#0284C7',
+            },
+            accent: {
+              400: '#2DD4BF',
+              500: '#14B8A6',
+            },
+            emerald: {
+              400: '#34D399',
+              500: '#10B981',
+              600: '#059669',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-  <!-- Iconify Icons -->
+  <!-- Icons -->
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+  <style>
+    body {
+      background-color: #0F172A;
+      color: #F8FAFC;
+    }
+
+    .glass {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .glass-hover:hover {
+      background: rgba(16, 185, 129, 0.1);
+      border-color: rgba(16, 185, 129, 0.3);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .text-gradient {
+      background: linear-gradient(to right, #34D399, #10B981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #mobile-menu {
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    #mobile-menu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+  </style>
 </head>
 
-<body class="bg-white text-gray-800 smooth-scroll">
+<body class="antialiased selection:bg-emerald-500 selection:text-white">
 
-<!-- ================= HEADER ================= -->
-<div id="header"></div>
+  <!-- ================= HEADER ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass" id="navbar">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <img src="assets/logo.png" alt="Lattice Steel" style="width: 150px; height: 150px;"
+            class="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+        </a>
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+          <a href="index.html" class="text-white hover:text-primary-400 transition-colors">Home</a>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-gray-300 hover:text-white transition-colors py-2">
+              Services <span class="iconify group-hover:rotate-180 transition-transform duration-300"
+                data-icon="ph:caret-down-bold"></span>
+            </button>
+            <div
+              class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="w-72 glass rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <div class="p-2 space-y-1">
+                  <a href="qa-shop-drawing-review.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div
+                      class="text-emerald-400 font-semibold group-hover/item:text-emerald-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:check-circle-bold"></span> We Review/QA
+                    </div>
+                  </a>
+                  <a href="estimation-mto.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-amber-400 font-semibold group-hover/item:text-amber-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:calculator-bold"></span> Estimation
+                    </div>
+                  </a>
+                  <a href="structural-steel.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div
+                      class="text-primary-400 font-semibold group-hover/item:text-primary-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:buildings-bold"></span> Structural Steel
+                    </div>
+                  </a>
+                  <a href="miscellaneous-steel-detailing.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-accent-400 font-semibold group-hover/item:text-accent-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:stairs-bold"></span> Misc. Steel
+                    </div>
+                  </a>
+                  <a href="connection-detailing.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-purple-400 font-semibold group-hover/item:text-purple-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:link-bold"></span> Connections
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a>
+          <a href="request-quote.html"
+            class="bg-primary-600 hover:bg-primary-500 text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-lg hover:shadow-primary-500/25 flex items-center gap-2">
+            Get Quote <span class="iconify" data-icon="ph:arrow-right-bold"></span>
+          </a>
+        </nav>
+        <button class="md:hidden text-white text-2xl" id="menu-btn"><span class="iconify"
+            data-icon="ph:list-bold"></span></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="glass border-t border-white/5 md:hidden">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block text-white font-medium">Home</a>
+        <div class="space-y-2 pl-4 border-l-2 border-primary-500/30">
+          <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Services</p>
+          <a href="structural-steel.html" class="block text-gray-300 hover:text-primary-400">Structural Steel</a>
+          <a href="miscellaneous-steel-detailing.html" class="block text-gray-300 hover:text-primary-400">Misc.
+            Steel</a>
+          <a href="connection-detailing.html" class="block text-gray-300 hover:text-primary-400">Connection
+            Detailing</a>
+          <a href="estimation-mto.html" class="block text-gray-300 hover:text-primary-400">Estimation & MTO</a>
+          <a href="qa-shop-drawing-review.html" class="block text-gray-300 hover:text-primary-400">QA Review</a>
+        </div>
+        <a href="about.html" class="block text-white font-medium">About</a>
+        <a href="request-quote.html"
+          class="block w-full text-center bg-primary-600 text-white py-3 rounded-lg font-bold">Request Quote</a>
+      </div>
+    </div>
+  </header>
 
-<!-- ================= HERO ================= -->
-<section class="pt-28 bg-cover bg-center"
-  style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80')">
-  <div class="bg-gradient-to-r from-black/80 via-black/50 to-black/80">
-    <div class="max-w-6xl mx-auto px-6 py-24 text-white">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        QA & Shop Drawing Review
+  <!-- ================= HERO ================= -->
+  <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-dark-900/90 mix-blend-multiply z-10"></div>
+      <!-- Using a generic industrial image -->
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80"
+        alt="QA Review" class="w-full h-full object-cover opacity-60">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-20 text-center">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-emerald-500/30 text-emerald-300 text-sm font-medium mb-6 reveal active">
+        <span class="iconify" data-icon="ph:check-circle-bold"></span> Independent Verification
+      </div>
+      <h1 class="font-display text-5xl md:text-6xl font-bold mb-6 reveal active delay-100">
+        QA & Shop <span class="text-gradient">Review</span>
       </h1>
-      <p class="text-lg max-w-4xl">
-        Independent quality assurance reviews that identify missing information,
-        coordination issues, and constructability risks before fabrication.
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed reveal active delay-200">
+        Independent quality assurance to catch errors before they reach the shop.
+        We identify missing dimensions, coordination issues, and constructability risks early.
       </p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= OVERVIEW ================= -->
+  <!-- ================= OVERVIEW ================= -->
+  <section class="py-20 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <div class="reveal">
+      <h2 class="font-display text-3xl font-bold mb-6">Prevent <span class="text-emerald-400">Costly Delays</span></h2>
+      <p class="text-gray-400 text-lg leading-relaxed mb-6">
+        Our independent reviews provide a safety net for fabricators and third-party detailers.
+        By catching clashes and missing info in the model phase, we drastically reduce
+        shop interruptions and RFIs during fabrication.
+      </p>
+    </div>
+    <div class="reveal delay-100">
+      <div class="relative rounded-2xl overflow-hidden glass p-2 border border-white/10">
+        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80"
+          alt="Blueprint Review" class="rounded-xl w-full h-auto hover:scale-105 transition-transform duration-500">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SCOPE ================= -->
+  <section class="py-20 bg-dark-800 relative">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-display text-4xl font-bold">Review <span class="text-emerald-400">Checklist</span></h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal">
+          <div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 mb-6">
+            <span class="iconify text-3xl" data-icon="mdi:ruler-square"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Completeness Checks</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• Missing dimensions and callouts</li>
+            <li>• Incomplete member or connection information</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal delay-100">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-white mb-6">
+            <span class="iconify text-3xl" data-icon="mdi:factory"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Material Verification</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• Material grades and specifications</li>
+            <li>• Plate, bolt, and weld consistency</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal delay-200">
+          <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-400 mb-6">
+            <span class="iconify text-3xl" data-icon="mdi:link-variant"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Connection Review</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• Connection clarity and detailing logic</li>
+            <li>• Interference Checks</li>
+            <li>• Alignment with approved connection designs</li>
+          </ul>
+        </div>
+        <!-- Card 4 -->
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal">
+          <div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 mb-6">
+            <span class="iconify text-3xl" data-icon="mdi:crane"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Erection Feasibility</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• Field access and clearance checks</li>
+            <li>• Logical erection sequencing</li>
+          </ul>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal delay-100">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-white mb-6">
+            <span class="iconify text-3xl" data-icon="mdi:clipboard-check-outline"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Code Compliance</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• AISC and AWS compliance checks</li>
+            <li>• OSHA erection considerations</li>
+          </ul>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal delay-200">
+          <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-400 mb-6">
+            <span class="iconify text-3xl" data-icon="ph:shield-check-bold"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Coordination Review</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• Drawing and model coordination issues</li>
+            <li>• Cross-discipline conflict identification</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DELIVERABLES ================= -->
+  <section class="py-20 max-w-7xl mx-auto px-6">
+    <h2 class="font-display text-3xl font-bold mb-12 text-center reveal">What You <span
+        class="text-emerald-400">Receive</span></h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="glass p-8 rounded-2xl flex items-start gap-6 reveal">
+        <div class="min-w-[3rem] h-12 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400">
+          <span class="iconify text-3xl" data-icon="ph:file-pdf-bold"></span>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3">Red-Line Markups</h3>
+          <p class="text-gray-400 text-sm">PDF shop drawings clearly annotated with corrections, queries, and missing
+            info.</p>
+        </div>
+      </div>
+
+      <div class="glass p-8 rounded-2xl flex items-start gap-6 reveal delay-100">
+        <div class="min-w-[3rem] h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400">
+          <span class="iconify text-3xl" data-icon="ph:list-checks-bold"></span>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3">Issue Register</h3>
+          <p class="text-gray-400 text-sm">A consolidated list of all findings, prioritized by severity, ready for RFI
+            creation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOFTWARE ================= -->
+  <section class="py-20 bg-dark-800">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="font-display text-3xl font-bold mb-10">Software Stack</h2>
+      <div class="flex flex-wrap justify-center gap-8">
+        <div class="glass px-8 py-6 rounded-xl flex items-center gap-4 reveal">
+          <span class="iconify text-4xl text-white" data-icon="simple-icons:bluebeam"></span>
+          <span class="text-xl font-bold">Bluebeam</span>
+        </div>
+        <div class="glass px-8 py-6 rounded-xl flex items-center gap-4 reveal delay-100">
+          <span class="iconify text-4xl text-white" data-icon="simple-icons:trimble"></span>
+          <span class="text-xl font-bold">Tekla Structures</span>
+        </div>
+        <div class="glass px-8 py-6 rounded-xl flex items-center gap-4 reveal delay-200">
+          <span class="iconify text-4xl text-white" data-icon="mdi:cube-outline"></span>
+          <span class="text-xl font-bold">SDS/2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- ================= VALUE ================= -->
 <section class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold text-blue-900 mb-6">
-    Service Overview
-  </h2>
-  <p class="text-lg text-gray-700 max-w-5xl">
-    We provide independent QA and shop drawing review services for steel
-    fabricators to catch errors and coordination issues early. Our reviews help
-    prevent shop interruptions, reduce RFIs, and minimize costly field delays by
-    identifying issues before fabrication begins.
-  </p>
-</section>
-
-<!-- ================= SCOPE ================= -->
-<section class="bg-gray-50 py-20">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-blue-900 mb-12">
-      Scope of QA Review
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-10">
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:ruler-square"></span>
-        <h3 class="text-xl font-semibold mb-3">Completeness Checks</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>• Missing dimensions and callouts</li>
-          <li>• Incomplete member or connection information</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:factory"></span>
-        <h3 class="text-xl font-semibold mb-3">Material Verification</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>• Material grades and specifications</li>
-          <li>• Plate, bolt, and weld consistency</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:link-variant"></span>
-        <h3 class="text-xl font-semibold mb-3">Connection Review</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>• Connection clarity and detailing logic</li>
-          <li>• Alignment with approved connection designs</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:crane"></span>
-        <h3 class="text-xl font-semibold mb-3">Erection Feasibility</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>• Field access and clearance checks</li>
-          <li>• Logical erection sequencing</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:clipboard-check-outline"></span>
-        <h3 class="text-xl font-semibold mb-3">Code Compliance</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>• AISC and AWS compliance checks</li>
-          <li>• OSHA erection considerations</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:file-compare-outline"></span>
-        <h3 class="text-xl font-semibold mb-3">Coordination Review</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>• Drawing and model coordination issues</li>
-          <li>• Cross-discipline conflict identification</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= DELIVERABLES ================= -->
-<section class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold text-blue-900 mb-12">
-    QA Review Deliverables
-  </h2>
-
-  <div class="grid md:grid-cols-2 gap-12">
-
-    <div class="flex gap-5">
-      <span class="iconify text-4xl text-blue-900" data-icon="mdi:file-pdf-box"></span>
-      <ul class="space-y-3 text-lg text-gray-700">
-        <li>Marked-up shop drawings (PDF)</li>
-        <li>Clear, traceable QA comments</li>
-      </ul>
-    </div>
-
-    <div class="flex gap-5">
-      <span class="iconify text-4xl text-blue-900" data-icon="mdi:clipboard-text-outline"></span>
-      <ul class="space-y-3 text-lg text-gray-700">
-        <li>Consolidated issue lists</li>
-        <li>RFI-ready documentation</li>
-        <li>Revision tracking support</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= SOFTWARE ================= -->
-<section class="bg-gray-50 py-20">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-blue-900 mb-10">
-      Software Used
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-10">
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <h3 class="text-xl font-semibold mb-2">Bluebeam Revu</h3>
-        <p class="text-gray-700">
-          Primary platform for QA reviews, markups, and issue tracking.
-        </p>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <h3 class="text-xl font-semibold mb-2">Tekla Structures</h3>
-        <p class="text-gray-700">
-          Model review support for coordination and validation.
-        </p>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <h3 class="text-xl font-semibold mb-2">SDS/2</h3>
-        <p class="text-gray-700">
-          Model-based checks aligned with fabrication workflows.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= CODES ================= -->
-<section class="bg-blue-900 text-white py-20">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-10">
-      Codes & Standards Referenced
-    </h2>
-
-    <div class="grid md:grid-cols-2 gap-8 text-lg">
-      <ul class="space-y-2">
-        <li>• AISC standards</li>
-        <li>• AWS D1.1</li>
-        <li>• ASTM material specifications</li>
-      </ul>
-      <ul class="space-y-2">
-        <li>• OSHA erection considerations</li>
-        <li>• NISD detailing best practices</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ================= VALUE ================= -->
-<section class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold text-blue-900 mb-12">
+  <h2 class="text-3xl font-bold mb-10 text-primary-400 text-center">
     Value to Fabricators
   </h2>
 
-  <div class="grid md:grid-cols-2 gap-8 text-lg text-gray-700">
-
+  <div class="grid md:grid-cols-2 gap-8 text-lg text-white">
     <div class="flex gap-4">
       <span class="iconify text-3xl text-blue-900" data-icon="mdi:check-circle-outline"></span>
-      Reduced shop interruptions and clarification calls
+      Fabrication-accurate models aligned with shop practices
     </div>
-
     <div class="flex gap-4">
       <span class="iconify text-3xl text-blue-900" data-icon="mdi:check-circle-outline"></span>
-      Fewer RFIs and re-submittals
+      Reduced RFIs and fewer drawing revisions
     </div>
-
     <div class="flex gap-4">
       <span class="iconify text-3xl text-blue-900" data-icon="mdi:check-circle-outline"></span>
-      Improved drawing quality and consistency
+      Erection-friendly drawings that support field efficiency
     </div>
-
     <div class="flex gap-4">
       <span class="iconify text-3xl text-blue-900" data-icon="mdi:check-circle-outline"></span>
-      Cost and schedule savings during fabrication
+      Full compliance with U.S. fabrication practices
     </div>
-
   </div>
 </section>
-
-<!-- ================= CTA ================= -->
-<section class="bg-gray-100 py-16">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-blue-900">
-      Need Independent QA Support?
+<section class="py-20 bg-dark-800">
+  <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-3xl font-bold mb-10 text-primary-400 text-center">
+      Codes & Standards
     </h2>
+
+    <div class="flex flex-wrap justify-center" style="gap: 15rem;">
+      <ul class="text-gray-400 space-y-2 text-sm">
+        <li>• AISC 303, AISC 360, AISC 341</li>
+        <li>• NISD detailing guidelines</li>
+        <li>• AWS D1.1</li>
+      </ul>
+      <ul class="text-gray-400 space-y-2 text-sm">
+        <li>• ASTM material specifications</li>
+        <li>• RCSC bolting standards</li>
+        <li>• OSHA erection considerations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- ================= CTA ================= -->
+<section class="max-w-7xl mx-auto px-6 py-20">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-primary-400">
+      Need Structural Steel Detailing Support?
+    </h2>
+
     <p class="mt-4 text-lg">
-      Share your shop drawings or models. Our team will review them and
-      provide clear, actionable feedback within one business day.
+      Share your project drawings and scope. Our team will review your
+      requirements and respond within one business day.
     </p>
 
     <a href="request-quote.html"
@@ -293,20 +446,57 @@
     </a>
   </div>
 </section>
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-dark-900 border-t border-white/10 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <a href="index.html" class="block mb-4">
+            <img src="assets/logo.png" alt="Lattice Steel" style="width: 150px; height: 150px;" class="h-10 w-auto object-contain">
+          </a>
+          <p class="text-gray-400 text-sm max-w-xs leading-relaxed">
+            Professional U.S.-standard steel detailing services.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-6">Services</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="qa-shop-drawing-review.html" class="hover:text-primary-400">QA Services</a></li>
+            <li><a href="connection-detailing.html" class="hover:text-primary-400">Connection Design</a></li>
+            <li><a href="structural-steel.html" class="hover:text-primary-400">Structural Steel</a></li>
+            <li><a href="miscellaneous-steel-detailing.html" class="hover:text-primary-400">Misc. Detailing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-6">Company</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="about.html" class="hover:text-primary-400">About Us</a></li>
+            <li><a href="request-quote.html" class="hover:text-primary-400">Get Quote</a></li>
+            <li><a href="privacy-policy.html" class="hover:text-primary-400">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html" class="hover:text-primary-400 transition">Terms &
+                                Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 text-center text-gray-600 text-sm">
+        <p>&copy; 2024 Lattice Steel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-<!-- ================= FOOTER ================= -->
-<div id="footer"></div>
-
-<!-- ================= LOAD HEADER & FOOTER ================= -->
-<script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
-
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>
-
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const icon = menuBtn.querySelector('.iconify');
+      icon.setAttribute('data-icon', mobileMenu.classList.contains('open') ? 'ph:x-bold' : 'ph:list-bold');
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
+
 </html>

@@ -1,259 +1,446 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Primary Meta Tags -->
-  <title>Steel Connection Detailing Services | Lattice Steel - AISC Compliant</title>
+  <title>Connection Detailing | Lattice Steel</title>
   <meta name="title" content="Steel Connection Detailing Services | Lattice Steel - AISC Compliant" />
-  <meta name="description" content="AISC-compliant steel connection detailing integrating engineer reactions, connection calculations, and fabricator preferences. Data-driven approach using Tekla Structures and SDS/2." />
-  <meta name="keywords" content="steel connection detailing, AISC connections, connection design, steel connections, connection calculations, engineer reactions, fabricator connections, Tekla connections, SDS/2 connections, structural connections" />
+  <meta name="description"
+    content="AISC-compliant steel connection detailing interacting with EOR reactions and connection calculations. Data-driven approach using Tekla & SDS/2." />
+  <meta name="keywords"
+    content="steel connection detailing, AISC connections, connection design, engineer reactions, fabricator preferences, Tekla Structures" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://latticesteel.com/connection-detailing.html" />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://latticesteel.com/connection-detailing.html" />
-  <meta property="og:title" content="Steel Connection Detailing Services | Lattice Steel" />
-  <meta property="og:description" content="AISC-compliant steel connection detailing integrating engineer reactions, connection calculations, and fabricator preferences." />
+  <meta property="og:title" content="Connection Detailing | Lattice Steel" />
+  <meta property="og:description"
+    content="AISC-compliant steel connection detailing integrating engineer reactions and calculations." />
   <meta property="og:image" content="https://latticesteel.com/assets/Connections.jpg" />
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://latticesteel.com/connection-detailing.html" />
-  <meta property="twitter:title" content="Steel Connection Detailing Services | Lattice Steel" />
-  <meta property="twitter:description" content="AISC-compliant steel connection detailing integrating engineer reactions, connection calculations, and fabricator preferences." />
-  <meta property="twitter:image" content="https://latticesteel.com/assets/Connections.jpg" />
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/logo.png" />
-  
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Steel Connection Detailing",
-    "provider": {
-      "@type": "Organization",
-      "name": "Lattice Steel"
-    },
-    "description": "AISC-compliant steel connection detailing that integrates engineer reactions, connection calculations, and fabricator preferences for structural integrity and constructability."
-  }
-  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Custom Styles -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-    .smooth-scroll { scroll-behavior: smooth; }
-    .fade-in { animation: fadeIn 0.6s ease-in; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
-  </style>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            dark: {
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            },
+            primary: {
+              400: '#38BDF8',
+              500: '#0EA5E9',
+              600: '#0284C7',
+            },
+            accent: {
+              400: '#2DD4BF',
+              500: '#14B8A6',
+            },
+            purple: {
+              400: '#A78BFA',
+              500: '#8B5CF6',
+              600: '#7C3AED',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-  <!-- Iconify Icons -->
+  <!-- Icons -->
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+  <style>
+    body {
+      background-color: #0F172A;
+      color: #F8FAFC;
+    }
+
+    .glass {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .glass-hover:hover {
+      background: rgba(139, 92, 246, 0.1);
+      border-color: rgba(139, 92, 246, 0.3);
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .text-gradient {
+      background: linear-gradient(to right, #A78BFA, #38BDF8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #mobile-menu {
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    #mobile-menu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    /* Table Styles */
+    .glass-table th {
+      background: rgba(139, 92, 246, 0.2);
+    }
+
+    .glass-table td,
+    .glass-table th {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .glass-table tr:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+  </style>
 </head>
 
-<body class="bg-white text-gray-800 smooth-scroll">
+<body class="antialiased selection:bg-purple-500 selection:text-white">
 
-<!-- ================= HEADER ================= -->
-<div id="header"></div>
+  <!-- ================= HEADER ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass" id="navbar">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <img src="assets/logo.png" alt="Lattice Steel" style="width: 150px; height: 150px;"
+            class="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+        </a>
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+          <a href="index.html" class="text-white hover:text-primary-400 transition-colors">Home</a>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-gray-300 hover:text-white transition-colors py-2">
+              Services <span class="iconify group-hover:rotate-180 transition-transform duration-300"
+                data-icon="ph:caret-down-bold"></span>
+            </button>
+            <div
+              class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="w-72 glass rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <div class="p-2 space-y-1">
+                  <a href="qa-shop-drawing-review.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div
+                      class="text-emerald-400 font-semibold group-hover/item:text-emerald-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:check-circle-bold"></span> We Review/QA
+                    </div>
+                  </a>
+                  <a href="estimation-mto.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-amber-400 font-semibold group-hover/item:text-amber-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:calculator-bold"></span> Estimation
+                    </div>
+                  </a>
+                  <a href="structural-steel.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div
+                      class="text-primary-400 font-semibold group-hover/item:text-primary-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:buildings-bold"></span> Structural Steel
+                    </div>
+                  </a>
+                  <a href="miscellaneous-steel-detailing.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-accent-400 font-semibold group-hover/item:text-accent-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:stairs-bold"></span> Misc. Steel
+                    </div>
+                  </a>
+                  <a href="connection-detailing.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-purple-400 font-semibold group-hover/item:text-purple-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:link-bold"></span> Connections
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a>
+          <a href="request-quote.html"
+            class="bg-primary-600 hover:bg-primary-500 text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-lg hover:shadow-primary-500/25 flex items-center gap-2">
+            Get Quote <span class="iconify" data-icon="ph:arrow-right-bold"></span>
+          </a>
+        </nav>
+        <button class="md:hidden text-white text-2xl" id="menu-btn"><span class="iconify"
+            data-icon="ph:list-bold"></span></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="glass border-t border-white/5 md:hidden">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block text-white font-medium">Home</a>
+        <div class="space-y-2 pl-4 border-l-2 border-primary-500/30">
+          <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Services</p>
+          <a href="structural-steel.html" class="block text-gray-300 hover:text-primary-400">Structural Steel</a>
+          <a href="miscellaneous-steel-detailing.html" class="block text-gray-300 hover:text-primary-400">Misc.
+            Steel</a>
+          <a href="connection-detailing.html" class="block text-gray-300 hover:text-primary-400">Connection
+            Detailing</a>
+          <a href="estimation-mto.html" class="block text-gray-300 hover:text-primary-400">Estimation & MTO</a>
+          <a href="qa-shop-drawing-review.html" class="block text-gray-300 hover:text-primary-400">QA Review</a>
+        </div>
+        <a href="about.html" class="block text-white font-medium">About</a>
+        <a href="request-quote.html"
+          class="block w-full text-center bg-primary-600 text-white py-3 rounded-lg font-bold">Request Quote</a>
+      </div>
+    </div>
+  </header>
 
-<!-- ================= HERO ================= -->
-  
-<section class="pt-28 bg-cover bg-center"
-  style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80')">
-  <div class="bg-gradient-to-r from-black/80 via-black/50 to-black/80">
-    <div class="max-w-6xl mx-auto px-6 py-24 text-white">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        Connection Detailing
+  <!-- ================= HERO ================= -->
+  <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-dark-900/90 mix-blend-multiply z-10"></div>
+      <img src="assets/Connections.jpg" alt="Steel Connections" class="w-full h-full object-cover opacity-60">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-20 text-center">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-purple-500/30 text-purple-300 text-sm font-medium mb-6 reveal active">
+        <span class="iconify" data-icon="ph:link-bold"></span> Specialized Service
+      </div>
+      <h1 class="font-display text-5xl md:text-6xl font-bold mb-6 reveal active delay-100">
+        Connection <span class="text-gradient">Detailing</span>
       </h1>
-      <p class="text-lg max-w-4xl">
-        A disciplined, data-driven approach to steel connection detailing that
-        ensures structural integrity, constructability, and AISC compliance in
-        Tekla Structures and SDS/2.
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed reveal active delay-200">
+        A disciplined, data-driven approach. We integrate engineer reactions, calculations,
+        and fabricator preferences into AISC-compliant connection models.
       </p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= INTRO ================= -->
-  <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-14 items-center">
-  <div>
-    <h2 class="text-3xl font-bold text-blue-900 mb-6">
-      Our Approach to Connection Detailing
-    </h2>
-    <p class="text-lg text-gray-700">
-      At Lattice Steel, connection detailing is treated as a controlled technical
-    process, not a template-driven task. Each connection is developed only after
-    validating design inputs, calculation data, and fabrication requirements to
-    ensure accuracy and constructability.
-    </p>
-  </div>
+  <!-- ================= INTRO ================= -->
+  <section class="py-20 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <div class="reveal">
+      <h2 class="font-display text-3xl font-bold mb-6">Technical <span class="text-purple-400">Excellence</span></h2>
+      <p class="text-gray-400 text-lg leading-relaxed mb-6">
+        At Lattice Steel, connection detailing is a controlled technical process.
+        Each node is modeled only after validating design inputs and fabrication constraints,
+        ensuring every bolt and weld is constructible.
+      </p>
+    </div>
+    <div class="reveal delay-100">
+      <div class="relative rounded-2xl overflow-hidden glass p-2 border border-white/10">
+        <img src="assets/Connections.jpg" alt="Connection Model"
+          class="rounded-xl w-full h-auto hover:scale-105 transition-transform duration-500">
+      </div>
+    </div>
+  </section>
 
-  <img
-    src="assets/Connections.jpg"
-    alt="Steel connection detailing and fabrication work for structural steel projects"
-    class="rounded-lg shadow-lg fade-in">
-</section>
-
-<!-- ================= THREE DATA STREAMS ================= -->
-<section class="bg-gray-50 py-20">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-blue-900 mb-12">
-      Three Key Data Inputs
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-10">
-
-      <!-- EOR -->
-      <div class="bg-white p-8 rounded-lg shadow">
-        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:account-tie"></span>
-        <h3 class="text-xl font-semibold mb-3">Engineer of Record (EOR)</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>• Reaction loads (shear, moment, axial)</li>
-          <li>• Governing design codes and criteria</li>
-          <li>• Standard connection details</li>
-          <li>• Material grade requirements</li>
-        </ul>
+  <!-- ================= DATA STREAMS ================= -->
+  <section class="py-20 bg-dark-800 relative">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-display text-4xl font-bold">Data <span class="text-purple-400">Integration</span></h2>
+        <p class="text-gray-400 mt-4">We synthesize three critical data streams into one accurate model.</p>
       </div>
 
-      <!-- Connection Engineer -->
-      <div class="bg-white p-8 rounded-lg shadow">
-        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:calculator-variant-outline"></span>
-        <h3 class="text-xl font-semibold mb-3">Connection Engineer</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>• Design calculation packages</li>
-          <li>• Plate sizes, thicknesses, and geometry</li>
-          <li>• Weld sizes and bolt strengths</li>
-          <li>• Stiffeners, doublers, and continuity plates</li>
-        </ul>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- EOR -->
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-white mb-6">
+            <span class="iconify text-3xl" data-icon="ph:user-focus-bold"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Engineer of Record</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• Shear, Moment, Axial loads</li>
+            <li>• Design Codes & Criteria</li>
+            <li>• Material Grades</li>
+          </ul>
+        </div>
+
+        <!-- Connection Eng -->
+        <div
+          class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal delay-100 border border-purple-500/30 shadow-[0_0_30px_rgba(139,92,246,0.1)]">
+          <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-purple-400 mb-6">
+            <span class="iconify text-3xl" data-icon="ph:function-bold"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-purple-200">Connection Engineer</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• Calculation Packages</li>
+            <li>• Plate & Weld Sizing</li>
+            <li>• Stiffeners & Doublers</li>
+          </ul>
+        </div>
+
+        <!-- Fabricator -->
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal delay-200">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-white mb-6">
+            <span class="iconify text-3xl" data-icon="ph:factory-bold"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Fabricator</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• Bolt Supply Preferences</li>
+            <li>• CNC Constraints</li>
+            <li>• Erection Clearances</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MODEL APPLICATION ================= -->
+  <section class="py-20 max-w-7xl mx-auto px-6">
+    <h2 class="font-display text-3xl font-bold mb-12 text-center reveal">Model <span
+        class="text-purple-400">Application</span></h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass p-8 rounded-2xl border-t-4 border-purple-500 reveal">
+        <h3 class="text-xl font-bold mb-3">Load Verification</h3>
+        <p class="text-gray-400 text-sm">Every modeled connection is cross-checked against EOR reactions to ensure 100%
+          load transfer accuracy.</p>
       </div>
 
-      <!-- Fabricator -->
-      <div class="bg-white p-8 rounded-lg shadow">
-        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:factory"></span>
-        <h3 class="text-xl font-semibold mb-3">Fabricator Preferences</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>• Preferred bolt sizes and stock</li>
-          <li>• Shop equipment and CNC constraints</li>
-          <li>• Shipping and handling limitations</li>
-          <li>• Field erection clearances</li>
-        </ul>
+      <div class="glass p-8 rounded-2xl border-t-4 border-primary-500 reveal delay-100">
+        <h3 class="text-xl font-bold mb-3">Clash Detection</h3>
+        <p class="text-gray-400 text-sm">Automated interference checking prevents field issues by identifying clashes
+          with adjacent framing or MEP.</p>
       </div>
 
+      <div class="glass p-8 rounded-2xl border-t-4 border-accent-500 reveal delay-200">
+        <h3 class="text-xl font-bold mb-3">Technical RFIs</h3>
+        <p class="text-gray-400 text-sm">We proactively generate clear, visual RFIs when inconsistencies arise, solving
+          problems before fabrication.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= MODEL APPLICATION ================= -->
-<section class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold text-blue-900 mb-12">
-    Application in the 3D Model
-  </h2>
+  <!-- ================= SUMMARY TABLE ================= -->
+  <section class="py-20 bg-dark-800">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-display text-3xl font-bold mb-10 text-center">Summary of Inputs</h2>
 
-  <div class="grid md:grid-cols-3 gap-10">
+      <div class="glass rounded-xl overflow-hidden reveal">
+        <table class="w-full text-left border-collapse glass-table">
+          <thead>
+            <tr>
+              <th class="p-5 font-bold text-white">Input Source</th>
+              <th class="p-5 font-bold text-white">Used For</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-300">
+            <tr>
+              <td class="p-5 font-semibold text-primary-400">Engineer of Record</td>
+              <td class="p-5">Reaction loads and design criteria</td>
+            </tr>
+            <tr>
+              <td class="p-5 font-semibold text-purple-400">Connection Engineer</td>
+              <td class="p-5">Design calculations and geometry verification</td>
+            </tr>
+            <tr>
+              <td class="p-5 font-semibold text-accent-400">Fabricator</td>
+              <td class="p-5">Shop standards and constructability</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <!-- ================= CTA ================= -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-primary-400">
+        Need Connection Detailing Support?
+      </h2>
 
-    <div class="bg-white p-8 rounded-lg shadow border-l-4 border-blue-900">
-      <h3 class="text-xl font-semibold mb-3">Load Verification</h3>
-      <p class="text-gray-700">
-        Each modeled connection is verified against EOR reactions or connection
-        engineer calculations to ensure correct load transfer.
+      <p class="mt-4 text-lg">
+        Share your project drawings and scope. Our team will review your
+        requirements and respond within one business day.
       </p>
+
+      <a href="request-quote.html"
+        class="inline-block mt-8 bg-blue-900 text-white px-10 py-3 rounded-lg text-lg font-semibold hover:bg-blue-800 transition">
+        Request a Quote
+      </a>
     </div>
-
-    <div class="bg-white p-8 rounded-lg shadow border-l-4 border-blue-900">
-      <h3 class="text-xl font-semibold mb-3">Clash & Clearance Checks</h3>
-      <p class="text-gray-700">
-        Connections are reviewed for clashes with adjacent members, MEP systems,
-        and architectural finishes during early modeling stages.
-      </p>
+  </section>
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-dark-900 border-t border-white/10 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <a href="index.html" class="block mb-4">
+            <img src="assets/logo.png" alt="Lattice Steel" style="width: 150px; height: 150px;" class="h-10 w-auto object-contain">
+          </a>
+          <p class="text-gray-400 text-sm max-w-xs leading-relaxed">
+            Professional U.S.-standard steel detailing services.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-6">Services</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="qa-shop-drawing-review.html" class="hover:text-primary-400">QA Services</a></li>
+            <li><a href="connection-detailing.html" class="hover:text-primary-400">Connection Design</a></li>
+            <li><a href="structural-steel.html" class="hover:text-primary-400">Structural Steel</a></li>
+            <li><a href="miscellaneous-steel-detailing.html" class="hover:text-primary-400">Misc. Detailing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-6">Company</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="about.html" class="hover:text-primary-400">About Us</a></li>
+            <li><a href="request-quote.html" class="hover:text-primary-400">Get Quote</a></li>
+            <li><a href="privacy-policy.html" class="hover:text-primary-400">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html" class="hover:text-primary-400 transition">Terms &
+                                Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 text-center text-gray-600 text-sm">
+        <p>&copy; 2024 Lattice Steel. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
 
-    <div class="bg-white p-8 rounded-lg shadow border-l-4 border-blue-900">
-      <h3 class="text-xl font-semibold mb-3">Technical RFIs</h3>
-      <p class="text-gray-700">
-        When inconsistencies are identified, clear RFIs are prepared with
-        annotated model views before fabrication begins.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= SUMMARY TABLE ================= -->
-<section class="bg-gray-50 py-20">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-blue-900 mb-10">
-      Data Integration Summary
-    </h2>
-
-    <div class="overflow-x-auto">
-      <table class="min-w-full border border-gray-300 bg-white">
-        <thead class="bg-blue-900 text-white">
-          <tr>
-            <th class="px-6 py-4 text-left">Input Source</th>
-            <th class="px-6 py-4 text-left">Used For</th>
-          </tr>
-        </thead>
-        <tbody class="text-gray-700">
-          <tr class="border-t">
-            <td class="px-6 py-4 font-semibold">Engineer of Record</td>
-            <td class="px-6 py-4">Reaction loads and design criteria</td>
-          </tr>
-          <tr class="border-t bg-gray-50">
-            <td class="px-6 py-4 font-semibold">Connection Engineer</td>
-            <td class="px-6 py-4">Connection design and strength verification</td>
-          </tr>
-          <tr class="border-t">
-            <td class="px-6 py-4 font-semibold">Fabricator</td>
-            <td class="px-6 py-4">Shop standards and erection constraints</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CTA ================= -->
-<section class="bg-gray-100 py-16">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-blue-900">
-      Need Connection Detailing Support?
-    </h2>
-    <p class="mt-4 text-lg">
-      Share your reactions, connection calculations, or project drawings.
-      Our team will review and respond within one business day.
-    </p>
-
-    <a href="request-quote.html"
-      class="inline-block mt-8 bg-blue-900 text-white px-10 py-3 rounded-lg text-lg font-semibold hover:bg-blue-800 transition">
-      Request a Quote
-    </a>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<div id="footer"></div>
-
-<!-- ================= LOAD HEADER & FOOTER ================= -->
-<script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
-
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>
-
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const icon = menuBtn.querySelector('.iconify');
+      icon.setAttribute('data-icon', mobileMenu.classList.contains('open') ? 'ph:x-bold' : 'ph:list-bold');
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
-</html>
 
+</html>

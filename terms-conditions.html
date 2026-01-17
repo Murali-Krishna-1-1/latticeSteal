@@ -1,226 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Primary Meta Tags -->
-  <title>Terms & Conditions | Lattice Steel - Service Terms & Professional Standards</title>
-  <meta name="title" content="Terms & Conditions | Lattice Steel - Service Terms & Professional Standards" />
-  <meta name="description" content="Terms and conditions governing Lattice Steel's professional steel detailing services, including scope of services, client responsibilities, and liability limitations." />
+  <title>Terms & Conditions | Lattice Steel</title>
+  <meta name="title" content="Terms & Conditions | Lattice Steel" />
+  <meta name="description" content="Terms governing Lattice Steel's professional services." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://latticesteel.com/terms-conditions.html" />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://latticesteel.com/terms-conditions.html" />
   <meta property="og:title" content="Terms & Conditions | Lattice Steel" />
-  <meta property="og:description" content="Terms and conditions governing Lattice Steel's professional steel detailing services." />
+  <meta property="og:description" content="Professional Service Terms." />
   <meta property="og:image" content="https://latticesteel.com/assets/logo.png" />
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary" />
-  <meta property="twitter:url" content="https://latticesteel.com/terms-conditions.html" />
-  <meta property="twitter:title" content="Terms & Conditions | Lattice Steel" />
-  <meta property="twitter:description" content="Terms and conditions governing Lattice Steel's professional steel detailing services." />
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/logo.png" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Custom Styles -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            dark: {
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            },
+            primary: {
+              400: '#38BDF8',
+              500: '#0EA5E9',
+              600: '#0284C7',
+            },
+            accent: {
+              400: '#2DD4BF',
+              500: '#14B8A6',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Icons -->
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-    .smooth-scroll { scroll-behavior: smooth; }
+    body {
+      background-color: #0F172A;
+      color: #F8FAFC;
+    }
+
+    .glass {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .text-gradient {
+      background: linear-gradient(to right, #38BDF8, #2DD4BF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #mobile-menu {
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    #mobile-menu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
   </style>
 </head>
 
-<body class="bg-white text-gray-800 smooth-scroll">
+<body class="antialiased selection:bg-primary-500 selection:text-white">
 
-<!-- ================= HEADER ================= -->
-<div id="header"></div>
+  <!-- ================= HEADER ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass" id="navbar">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <img src="assets/logo.png" alt="Lattice Steel" style="width: 150px; height: 150px;"
+            class="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+        </a>
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+          <a href="index.html" class="text-white hover:text-primary-400 transition-colors">Home</a>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-gray-300 hover:text-white transition-colors py-2">
+              Services <span class="iconify group-hover:rotate-180 transition-transform duration-300"
+                data-icon="ph:caret-down-bold"></span>
+            </button>
+            <div
+              class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="w-72 glass rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <div class="p-2 space-y-1">
+                  <a href="structural-steel.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div
+                      class="text-primary-400 font-semibold group-hover/item:text-primary-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:buildings-bold"></span> Structural Steel
+                    </div>
+                  </a>
+                  <a href="miscellaneous-steel-detailing.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-accent-400 font-semibold group-hover/item:text-accent-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:stairs-bold"></span> Misc. Steel
+                    </div>
+                  </a>
+                  <a href="connection-detailing.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-purple-400 font-semibold group-hover/item:text-purple-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:link-bold"></span> Connections
+                    </div>
+                  </a>
+                  <a href="estimation-mto.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-amber-400 font-semibold group-hover/item:text-amber-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:calculator-bold"></span> Estimation
+                    </div>
+                  </a>
+                  <a href="qa-shop-drawing-review.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div
+                      class="text-emerald-400 font-semibold group-hover/item:text-emerald-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:check-circle-bold"></span> We Review/QA
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a>
+          <a href="request-quote.html"
+            class="bg-primary-600 hover:bg-primary-500 text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-lg hover:shadow-primary-500/25 flex items-center gap-2">
+            Get Quote <span class="iconify" data-icon="ph:arrow-right-bold"></span>
+          </a>
+        </nav>
+        <button class="md:hidden text-white text-2xl" id="menu-btn"><span class="iconify"
+            data-icon="ph:list-bold"></span></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="glass border-t border-white/5 md:hidden">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block text-white font-medium">Home</a>
+        <div class="space-y-2 pl-4 border-l-2 border-primary-500/30">
+          <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Services</p>
+          <a href="structural-steel.html" class="block text-gray-300 hover:text-primary-400">Structural Steel</a>
+          <a href="miscellaneous-steel-detailing.html" class="block text-gray-300 hover:text-primary-400">Misc.
+            Steel</a>
+          <a href="connection-detailing.html" class="block text-gray-300 hover:text-primary-400">Connection
+            Detailing</a>
+          <a href="estimation-mto.html" class="block text-gray-300 hover:text-primary-400">Estimation & MTO</a>
+          <a href="qa-shop-drawing-review.html" class="block text-gray-300 hover:text-primary-400">QA Review</a>
+        </div>
+        <a href="about.html" class="block text-white font-medium">About</a>
+        <a href="request-quote.html"
+          class="block w-full text-center bg-primary-600 text-white py-3 rounded-lg font-bold">Request Quote</a>
+      </div>
+    </div>
+  </header>
 
-<!-- ================= HERO ================= -->
-<section class="pt-28 bg-gray-100">
-  <div class="max-w-6xl mx-auto px-6 py-16">
-    <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-      Terms & Conditions
-    </h1>
-    <p class="text-lg text-gray-700 max-w-4xl">
-      These Terms & Conditions govern the use of the Lattice Steel website
-      and the professional services provided by Lattice Steel.
-    </p>
-    <p class="mt-2 text-sm text-gray-500">
-      Effective Date: 2026-01-05
-    </p>
-  </div>
-</section>
+  <!-- ================= HERO ================= -->
+  <section class="relative pt-32 pb-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 reveal active">
+        Terms & <span class="text-gradient">Conditions</span>
+      </h1>
+      <p class="text-gray-400 text-sm reveal active delay-100">
+        Effective Date: January 5, 2026
+      </p>
+    </div>
+  </section>
 
-<!-- ================= CONTENT ================= -->
-<section class="max-w-5xl mx-auto px-6 py-20 space-y-14">
+  <!-- ================= CONTENT ================= -->
+  <section class="max-w-4xl mx-auto px-6 pb-24">
+    <div class="glass p-10 rounded-2xl space-y-12 text-gray-300 leading-relaxed reveal active delay-200">
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">1. Scope of Services</h2>
-    <p class="text-lg text-gray-700">
-      Lattice Steel provides professional services including structural steel detailing,
-      estimodeling and material quantity take-offs, and independent QA review of shop drawings
-      for fabricators and third party detailers. Services are performed in accordance with the
-      agreed project scope, applicable standards, and information provided by the Client.
-    </p>
-  </div>
+      <p class="text-lg border-l-4 border-primary-500 pl-6">
+        These Terms & Conditions govern the professional services provided by Lattice Steel. By engaging our services,
+        you agree to these terms.
+      </p>
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">2. Professional Standard of Care</h2>
-    <p class="text-lg text-gray-700">
-      Services shall be performed using reasonable skill and care consistent
-      with generally accepted industry standards. Lattice Steel does not
-      provide engineering design services unless expressly stated in writing.
-    </p>
-  </div>
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">1. Scope of Services</h2>
+        <p>Lattice Steel provides structural steel detailing, estimodeling, and independent QA review services. All
+          services are performed in accordance with the agreed project scope, applicable standards (AISC/NISD), and
+          client-provided documents.</p>
+      </div>
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">3. Client Responsibilities</h2>
-    <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
-      <li>Provide complete, accurate, and current drawings and specifications</li>
-      <li>Identify applicable codes, standards, and project requirements</li>
-      <li>Review deliverables and provide timely feedback</li>
-    </ul>
-    <p class="mt-4 text-lg text-gray-700">
-      Lattice Steel shall not be responsible for errors or delays arising from
-      incomplete or incorrect information supplied by the Client.
-    </p>
-  </div>
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">2. Professional Standard of Care</h2>
+        <p>Services are performed using reasonable skill and care consistent with generally accepted industry standards.
+          Note: Lattice Steel provides detailing services and does not assume the role or responsibilities of the
+          Engineer of Record (EOR).</p>
+      </div>
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">
-      4. Independent QA Review Disclaimer
-    </h2>
-    <p class="text-lg text-gray-700 mb-4">
-      Independent QA review services are intended to identify potential
-      inconsistencies, omissions, or constructability concerns and assist
-      fabricators in reducing shop calls and RFIs.
-    </p>
-    <p class="text-lg text-gray-700 font-semibold">
-      QA review does not replace the Engineer of Record’s responsibilities or
-      constitute engineering approval or certification.
-    </p>
-  </div>
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">3. Independent QA Review Disclaimer</h2>
+        <p>Our QA review services are designed to identify potential inconsistencies and constructability issues to
+          assist fabricators. This review does not constitute engineering approval, certification, or a guarantee of
+          error-free work.</p>
+      </div>
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">5. Estimodeling Disclaimer</h2>
-    <p class="text-lg text-gray-700">
-      Estimodeling quantities are based on information available at the time of
-      modeling and industry-standard assumptions. Quantities may vary due to
-      design changes or fabrication methods. No warranty is made that estimated
-      quantities will match final fabricated quantities.
-    </p>
-  </div>
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">4. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, Lattice Steel’s liability is limited to the fees paid for the
+          specific services giving rise to any claim. We maintain standard professional liability insurance.</p>
+      </div>
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">6. Changes in Scope</h2>
-    <p class="text-lg text-gray-700">
-      Any modification to drawings, specifications, or project requirements
-      constitutes a change in scope and may result in adjusted fees or schedules.
-      All changes must be agreed upon in writing.
-    </p>
-  </div>
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">5. Intellectual Property</h2>
+        <p>All models and drawings remain the intellectual property of Lattice Steel until full payment is received, at
+          which point the Client is granted a license for use on the specific project.</p>
+      </div>
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">7. Deliverables & Reliance</h2>
-    <p class="text-lg text-gray-700">
-      Deliverables are prepared solely for the intended project and Client.
-      No third party may rely on them without prior written consent.
-    </p>
-  </div>
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">Contact Information</h2>
+        <div class="flex flex-col gap-2">
+          <a href="mailto:business@latticesteel.com"
+            class="text-primary-400 hover:text-white transition">business@latticesteel.com</a>
+          <span>+1 (954) 751-2404</span>
+        </div>
+      </div>
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">8. Confidentiality</h2>
-    <p class="text-lg text-gray-700">
-      All non-public project information shall be treated as confidential and
-      used solely for the purpose of performing services, unless disclosure is
-      required by law.
-    </p>
-  </div>
+    </div>
+  </section>
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">9. Intellectual Property</h2>
-    <p class="text-lg text-gray-700">
-      All work products remain the intellectual property of Lattice Steel until
-      full payment is received. Upon payment, the Client is granted a limited,
-      non-transferable license for project use only.
-    </p>
-  </div>
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-dark-900 border-t border-white/10 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <a href="index.html" class="block mb-4">
+            <img src="assets/logo.png" alt="Lattice Steel" style="width: 150px; height: 150px;" class="h-10 w-auto object-contain">
+          </a>
+          <p class="text-gray-400 text-sm max-w-xs leading-relaxed">
+            Professional U.S.-standard steel detailing services.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-6">Services</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="structural-steel.html" class="hover:text-primary-400">Structural Steel</a></li>
+            <li><a href="miscellaneous-steel-detailing.html" class="hover:text-primary-400">Misc. Detailing</a></li>
+            <li><a href="connection-detailing.html" class="hover:text-primary-400">Connection Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-6">Company</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="about.html" class="hover:text-primary-400">About Us</a></li>
+            <li><a href="request-quote.html" class="hover:text-primary-400">Get Quote</a></li>
+            <li><a href="privacy-policy.html" class="hover:text-primary-400">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html" class="hover:text-primary-400 transition">Terms &
+                                Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 text-center text-gray-600 text-sm">
+        <p>&copy; 2024 Lattice Steel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">10. Fees & Payment</h2>
-    <p class="text-lg text-gray-700">
-      Fees and payment terms are defined in the applicable proposal or agreement.
-      Failure to make timely payments may result in suspension of services.
-    </p>
-  </div>
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">11. Limitation of Liability</h2>
-    <p class="text-lg text-gray-700">
-      To the maximum extent permitted by law, Lattice Steel’s total liability
-      shall be limited to the fees paid for the services giving rise to the claim.
-      Indirect or consequential damages are excluded.
-    </p>
-  </div>
-
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">
-      Insurance & Liability Cap
-    </h2>
-    <p class="text-lg text-gray-700 mb-4">
-      Lattice Steel maintains commercially reasonable insurance consistent with
-      industry standards. Insurance coverage does not constitute a warranty or
-      guarantee of performance.
-    </p>
-    <p class="text-lg text-gray-700">
-      Liability is capped at the total fees paid for the specific services giving
-      rise to the claim, consistent with industry-accepted risk allocation.
-    </p>
-  </div>
-
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">Governing Law</h2>
-    <p class="text-lg text-gray-700">
-      These Terms shall be governed by applicable laws, without regard to
-      conflict-of-law principles.
-    </p>
-  </div>
-
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">Contact Information</h2>
-    <p class="text-lg text-gray-700">
-      📧 Email:
-      <a href="mailto:business@latticesteel.com" class="text-blue-900 underline">
-        business@latticesteel.com
-      </a><br />
-      📞 Office: +1 (954) 751-2404
-    </p>
-  </div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-<div id="footer"></div>
-
-<!-- ================= LOAD HEADER & FOOTER ================= -->
-<script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
-
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>
-
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const icon = menuBtn.querySelector('.iconify');
+      icon.setAttribute('data-icon', mobileMenu.classList.contains('open') ? 'ph:x-bold' : 'ph:list-bold');
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
-</html>
 
+</html>

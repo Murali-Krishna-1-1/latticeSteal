@@ -1,208 +1,317 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Primary Meta Tags -->
-  <title>Privacy Policy | Lattice Steel - Data Protection & Confidentiality</title>
-  <meta name="title" content="Privacy Policy | Lattice Steel - Data Protection & Confidentiality" />
-  <meta name="description" content="Lattice Steel's privacy policy outlining how we protect and handle your personal information and project data. Learn about our commitment to data confidentiality and security." />
+  <title>Privacy Policy | Lattice Steel</title>
+  <meta name="title" content="Privacy Policy | Lattice Steel" />
+  <meta name="description" content="Lattice Steel's data protection and confidentiality policies." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://latticesteel.com/privacy-policy.html" />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://latticesteel.com/privacy-policy.html" />
   <meta property="og:title" content="Privacy Policy | Lattice Steel" />
-  <meta property="og:description" content="Learn how Lattice Steel protects and handles your personal information and project data." />
+  <meta property="og:description" content="Privacy and Data Protection." />
   <meta property="og:image" content="https://latticesteel.com/assets/logo.png" />
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary" />
-  <meta property="twitter:url" content="https://latticesteel.com/privacy-policy.html" />
-  <meta property="twitter:title" content="Privacy Policy | Lattice Steel" />
-  <meta property="twitter:description" content="Learn how Lattice Steel protects and handles your personal information and project data." />
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/logo.png" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Custom Styles -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-    .smooth-scroll { scroll-behavior: smooth; }
-  </style>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            dark: {
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            },
+            primary: {
+              400: '#38BDF8',
+              500: '#0EA5E9',
+              600: '#0284C7',
+            },
+            accent: {
+              400: '#2DD4BF',
+              500: '#14B8A6',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-  <!-- Iconify Icons -->
+  <!-- Icons -->
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+  <style>
+    body {
+      background-color: #0F172A;
+      color: #F8FAFC;
+    }
+
+    .glass {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .text-gradient {
+      background: linear-gradient(to right, #38BDF8, #2DD4BF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #mobile-menu {
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    #mobile-menu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+  </style>
 </head>
 
-<body class="bg-white text-gray-800 smooth-scroll">
+<body class="antialiased selection:bg-primary-500 selection:text-white">
 
-<!-- ================= HEADER ================= -->
-<div id="header"></div>
-
-<!-- ================= HERO ================= -->
-<section class="pt-28 bg-gray-100">
-  <div class="max-w-6xl mx-auto px-6 py-16">
-    <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-      Privacy Policy
-    </h1>
-    <p class="text-lg text-gray-700 max-w-4xl">
-      Lattice Steel is committed to protecting your privacy and safeguarding
-      the information you share with us.
-    </p>
-    <p class="mt-2 text-sm text-gray-500">
-      Effective Date: 2026-01-05
-    </p>
-  </div>
-</section>
-
-<!-- ================= CONTENT ================= -->
-<section class="max-w-5xl mx-auto px-6 py-20 space-y-14">
-
-  <!-- 1 -->
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">
-      1. Information We Collect
-    </h2>
-    <p class="text-lg text-gray-700 mb-4">
-      We may collect the following information when you contact us or use our website:
-    </p>
-    <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
-      <li>Name, company name, email address, and phone number</li>
-      <li>Project-related information shared voluntarily</li>
-      <li>Technical data such as IP address and browser type for website functionality</li>
-    </ul>
-  </div>
-
-  <!-- 2 -->
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">
-      2. How We Use Your Information
-    </h2>
-    <p class="text-lg text-gray-700 mb-4">
-      The information collected is used strictly for business and service-related purposes:
-    </p>
-    <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
-      <li>Responding to inquiries and providing requested services</li>
-      <li>Communicating about projects and service updates</li>
-      <li>Improving our website and service offerings</li>
-    </ul>
-    <p class="mt-4 text-lg text-gray-700 font-semibold">
-      We do not sell, rent, or trade your personal information to third parties.
-    </p>
-  </div>
-
-  <!-- 3 -->
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">
-      3. Data Confidentiality
-    </h2>
-    <p class="text-lg text-gray-700">
-      All project data, drawings, and documents shared with Lattice Steel are
-      treated as strictly confidential and are used only for the intended
-      project purpose.
-    </p>
-  </div>
-
-  <!-- 4 -->
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">
-      4. Data Security
-    </h2>
-    <p class="text-lg text-gray-700">
-      We implement reasonable administrative and technical security measures
-      to protect your information from unauthorized access, disclosure,
-      alteration, or misuse.
-    </p>
-  </div>
-
-  <!-- 5 -->
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">
-      5. Third-Party Links
-    </h2>
-    <p class="text-lg text-gray-700">
-      Our website may contain links to external websites. Lattice Steel is not
-      responsible for the privacy practices or content of third-party sites.
-    </p>
-  </div>
-
-  <!-- 6 -->
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">
-      6. Cookies
-    </h2>
-    <p class="text-lg text-gray-700">
-      Our website may use cookies to enhance user experience and analyze website
-      traffic. You may control cookie preferences through your browser settings.
-    </p>
-  </div>
-
-  <!-- 7 -->
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">
-      7. Your Consent
-    </h2>
-    <p class="text-lg text-gray-700">
-      By using our website or contacting us, you consent to this Privacy Policy.
-    </p>
-  </div>
-
-  <!-- 8 -->
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">
-      8. Updates to This Policy
-    </h2>
-    <p class="text-lg text-gray-700">
-      Lattice Steel may update this Privacy Policy periodically. Any changes
-      will be posted on this page with an updated effective date.
-    </p>
-  </div>
-
-  <!-- 9 -->
-  <div>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">
-      9. Contact Information
-    </h2>
-    <p class="text-lg text-gray-700 mb-4">
-      If you have any questions regarding this Privacy Policy, please contact us:
-    </p>
-
-    <div class="space-y-2 text-lg">
-      <p>
-        📧 <strong>Email:</strong>
-        <a href="mailto:business@latticesteel.com" class="text-blue-900 underline">
-          business@latticesteel.com
+  <!-- ================= HEADER ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass" id="navbar">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <img src="assets/logo.png" alt="Lattice Steel" style="width: 150px; height: 150px;"
+            class="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
         </a>
-      </p>
-      <p>
-        📞 <strong>Office:</strong> +1 (954) 751-2404
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+          <a href="index.html" class="text-white hover:text-primary-400 transition-colors">Home</a>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-gray-300 hover:text-white transition-colors py-2">
+              Services <span class="iconify group-hover:rotate-180 transition-transform duration-300"
+                data-icon="ph:caret-down-bold"></span>
+            </button>
+            <div
+              class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="w-72 glass rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <div class="p-2 space-y-1">
+                  <a href="structural-steel.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div
+                      class="text-primary-400 font-semibold group-hover/item:text-primary-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:buildings-bold"></span> Structural Steel
+                    </div>
+                  </a>
+                  <a href="miscellaneous-steel-detailing.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-accent-400 font-semibold group-hover/item:text-accent-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:stairs-bold"></span> Misc. Steel
+                    </div>
+                  </a>
+                  <a href="connection-detailing.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-purple-400 font-semibold group-hover/item:text-purple-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:link-bold"></span> Connections
+                    </div>
+                  </a>
+                  <a href="estimation-mto.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-amber-400 font-semibold group-hover/item:text-amber-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:calculator-bold"></span> Estimation
+                    </div>
+                  </a>
+                  <a href="qa-shop-drawing-review.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div
+                      class="text-emerald-400 font-semibold group-hover/item:text-emerald-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:check-circle-bold"></span> We Review/QA
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a>
+          <a href="request-quote.html"
+            class="bg-primary-600 hover:bg-primary-500 text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-lg hover:shadow-primary-500/25 flex items-center gap-2">
+            Get Quote <span class="iconify" data-icon="ph:arrow-right-bold"></span>
+          </a>
+        </nav>
+        <button class="md:hidden text-white text-2xl" id="menu-btn"><span class="iconify"
+            data-icon="ph:list-bold"></span></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="glass border-t border-white/5 md:hidden">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block text-white font-medium">Home</a>
+        <div class="space-y-2 pl-4 border-l-2 border-primary-500/30">
+          <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Services</p>
+          <a href="structural-steel.html" class="block text-gray-300 hover:text-primary-400">Structural Steel</a>
+          <a href="miscellaneous-steel-detailing.html" class="block text-gray-300 hover:text-primary-400">Misc.
+            Steel</a>
+          <a href="connection-detailing.html" class="block text-gray-300 hover:text-primary-400">Connection
+            Detailing</a>
+          <a href="estimation-mto.html" class="block text-gray-300 hover:text-primary-400">Estimation & MTO</a>
+          <a href="qa-shop-drawing-review.html" class="block text-gray-300 hover:text-primary-400">QA Review</a>
+        </div>
+        <a href="about.html" class="block text-white font-medium">About</a>
+        <a href="request-quote.html"
+          class="block w-full text-center bg-primary-600 text-white py-3 rounded-lg font-bold">Request Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="relative pt-32 pb-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 reveal active">
+        Privacy <span class="text-gradient">Policy</span>
+      </h1>
+      <p class="text-gray-400 text-sm reveal active delay-100">
+        Effective Date: January 5, 2026
       </p>
     </div>
-  </div>
+  </section>
 
-</section>
+  <!-- ================= CONTENT ================= -->
+  <section class="max-w-4xl mx-auto px-6 pb-24">
+    <div class="glass p-10 rounded-2xl space-y-12 text-gray-300 leading-relaxed reveal active delay-200">
 
-<!-- ================= FOOTER ================= -->
-<div id="footer"></div>
+      <p class="text-lg border-l-4 border-primary-500 pl-6">
+        Lattice Steel is committed to protecting your privacy and safeguarding the information you share with us.
+      </p>
 
-<!-- ================= LOAD HEADER & FOOTER ================= -->
-<script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">1. Information We Collect</h2>
+        <p class="mb-4">We may collect the following information when you contact us or use our website:</p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-400">
+          <li>Name, company name, email address, and phone number</li>
+          <li>Project-related information shared voluntarily (drawings, specs)</li>
+          <li>Technical data such as IP address and browser type for website functionality</li>
+        </ul>
+      </div>
 
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">2. How We Use Your Information</h2>
+        <p class="mb-4">The information collected is used strictly for:</p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-400">
+          <li>Responding to inquiries and providing requested quotes</li>
+          <li>Communicating about ongoing projects</li>
+          <li>Improving our service delivery</li>
+        </ul>
+        <p class="mt-4 font-semibold text-primary-400">We do not sell, rent, or trade your personal information to third
+          parties.</p>
+      </div>
 
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">3. Data Confidentiality</h2>
+        <p>All project data, drawings, and documents shared with Lattice Steel are treated as strictly confidential.
+          They are stored securely and accessed only by team members directly involved in your project.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">4. Data Security</h2>
+        <p>We implement robust administrative and technical security measures to protect your information from
+          unauthorized access, disclosure, or misuse.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">5. Contact Us</h2>
+        <p class="mb-4">If you have any questions regarding this Privacy Policy:</p>
+        <div class="flex flex-col gap-2">
+          <a href="mailto:business@latticesteel.com"
+            class="text-primary-400 hover:text-white transition">business@latticesteel.com</a>
+          <span>+1 (954) 751-2404</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-dark-900 border-t border-white/10 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <a href="index.html" class="block mb-4">
+            <img src="assets/logo.png" alt="Lattice Steel" style="width: 150px; height: 150px;" class="h-10 w-auto object-contain">
+          </a>
+          <p class="text-gray-400 text-sm max-w-xs leading-relaxed">
+            Professional U.S.-standard steel detailing services.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-6">Services</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="structural-steel.html" class="hover:text-primary-400">Structural Steel</a></li>
+            <li><a href="miscellaneous-steel-detailing.html" class="hover:text-primary-400">Misc. Detailing</a></li>
+            <li><a href="connection-detailing.html" class="hover:text-primary-400">Connection Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-6">Company</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="about.html" class="hover:text-primary-400">About Us</a></li>
+            <li><a href="request-quote.html" class="hover:text-primary-400">Get Quote</a></li>
+            <li><a href="privacy-policy.html" class="hover:text-primary-400">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html" class="hover:text-primary-400 transition">Terms &
+                                Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 text-center text-gray-600 text-sm">
+        <p>&copy; 2024 Lattice Steel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const icon = menuBtn.querySelector('.iconify');
+      icon.setAttribute('data-icon', mobileMenu.classList.contains('open') ? 'ph:x-bold' : 'ph:list-bold');
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
-</html>
 
+</html>

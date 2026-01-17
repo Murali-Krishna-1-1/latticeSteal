@@ -1,306 +1,440 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Primary Meta Tags -->
-  <title>Steel Estimation & Material Take-Off Services | Lattice Steel</title>
+  <title>Estimation & MTO | Lattice Steel</title>
   <meta name="title" content="Steel Estimation & Material Take-Off Services | Lattice Steel" />
-  <meta name="description" content="Accurate model-based steel quantity take-offs and estimation support using Tekla Structures and SDS/2. Reduce bidding risk with precise MTO reports and weight summaries for fabricators." />
-  <meta name="keywords" content="steel estimation, material take-off, MTO, quantity take-off, steel weight calculation, Tekla estimation, SDS/2 MTO, steel bidding support, BOQ, bill of quantities, steel procurement" />
+  <meta name="description"
+    content="Accurate model-based steel quantity take-offs and estimation support using Tekla Structures, SDS/2 and Bluebeam." />
+  <meta name="keywords"
+    content="steel estimation, material take-off, MTO, quantity take-off, steel bidding, Bluebeam estimation" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://latticesteel.com/estimation-mto.html" />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://latticesteel.com/estimation-mto.html" />
-  <meta property="og:title" content="Steel Estimation & Material Take-Off Services | Lattice Steel" />
-  <meta property="og:description" content="Accurate model-based steel quantity take-offs and estimation support using Tekla Structures and SDS/2 for bidding and procurement." />
+  <meta property="og:title" content="Estimation & MTO | Lattice Steel" />
+  <meta property="og:description" content="Accurate model-based steel quantity take-offs and estimation support." />
   <meta property="og:image" content="https://latticesteel.com/assets/logo.png" />
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://latticesteel.com/estimation-mto.html" />
-  <meta property="twitter:title" content="Steel Estimation & Material Take-Off Services | Lattice Steel" />
-  <meta property="twitter:description" content="Accurate model-based steel quantity take-offs and estimation support using Tekla Structures and SDS/2 for bidding and procurement." />
-  <meta property="twitter:image" content="https://latticesteel.com/assets/logo.png" />
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/logo.png" />
-  
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Steel Estimation and Material Take-Off",
-    "provider": {
-      "@type": "Organization",
-      "name": "Lattice Steel"
-    },
-    "description": "Model-based steel quantity take-offs and estimation support to reduce bidding risk and improve procurement confidence."
-  }
-  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Custom Styles -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-    .smooth-scroll { scroll-behavior: smooth; }
-    .fade-in { animation: fadeIn 0.6s ease-in; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
-  </style>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            dark: {
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            },
+            primary: {
+              400: '#38BDF8',
+              500: '#0EA5E9',
+              600: '#0284C7',
+            },
+            accent: {
+              400: '#2DD4BF',
+              500: '#14B8A6',
+            },
+            amber: {
+              400: '#FBBF24',
+              500: '#F59E0B',
+              600: '#D97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-  <!-- Iconify Icons -->
+  <!-- Icons -->
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+  <style>
+    body {
+      background-color: #0F172A;
+      color: #F8FAFC;
+    }
+
+    .glass {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .glass-hover:hover {
+      background: rgba(245, 158, 11, 0.1);
+      border-color: rgba(245, 158, 11, 0.3);
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .text-gradient {
+      background: linear-gradient(to right, #FBBF24, #F59E0B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #mobile-menu {
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    #mobile-menu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+  </style>
 </head>
 
-<body class="bg-white text-gray-800 smooth-scroll">
+<body class="antialiased selection:bg-amber-500 selection:text-white">
 
-<!-- ================= HEADER ================= -->
-<div id="header"></div>
+  <!-- ================= HEADER ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass" id="navbar">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <img src="assets/logo.png" alt="Lattice Steel" style="width: 150px; height: 150px;"
+            class="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+        </a>
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+          <a href="index.html" class="text-white hover:text-primary-400 transition-colors">Home</a>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-gray-300 hover:text-white transition-colors py-2">
+              Services <span class="iconify group-hover:rotate-180 transition-transform duration-300"
+                data-icon="ph:caret-down-bold"></span>
+            </button>
+            <div
+              class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="w-72 glass rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <div class="p-2 space-y-1">
+                  <a href="qa-shop-drawing-review.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div
+                      class="text-emerald-400 font-semibold group-hover/item:text-emerald-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:check-circle-bold"></span> We Review/QA
+                    </div>
+                  </a>
+                  <a href="estimation-mto.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-amber-400 font-semibold group-hover/item:text-amber-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:calculator-bold"></span> Estimation
+                    </div>
+                  </a>
+                  <a href="structural-steel.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div
+                      class="text-primary-400 font-semibold group-hover/item:text-primary-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:buildings-bold"></span> Structural Steel
+                    </div>
+                  </a>
+                  <a href="miscellaneous-steel-detailing.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-accent-400 font-semibold group-hover/item:text-accent-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:stairs-bold"></span> Misc. Steel
+                    </div>
+                  </a>
+                  <a href="connection-detailing.html"
+                    class="block px-4 py-3 rounded-lg hover:bg-white/5 transition group/item">
+                    <div class="text-purple-400 font-semibold group-hover/item:text-purple-300 flex items-center gap-2">
+                      <span class="iconify" data-icon="ph:link-bold"></span> Connections
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a>
+          <a href="request-quote.html"
+            class="bg-primary-600 hover:bg-primary-500 text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-lg hover:shadow-primary-500/25 flex items-center gap-2">
+            Get Quote <span class="iconify" data-icon="ph:arrow-right-bold"></span>
+          </a>
+        </nav>
+        <button class="md:hidden text-white text-2xl" id="menu-btn"><span class="iconify"
+            data-icon="ph:list-bold"></span></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="glass border-t border-white/5 md:hidden">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block text-white font-medium">Home</a>
+        <div class="space-y-2 pl-4 border-l-2 border-primary-500/30">
+          <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Services</p>
+          <a href="structural-steel.html" class="block text-gray-300 hover:text-primary-400">Structural Steel</a>
+          <a href="miscellaneous-steel-detailing.html" class="block text-gray-300 hover:text-primary-400">Misc.
+            Steel</a>
+          <a href="connection-detailing.html" class="block text-gray-300 hover:text-primary-400">Connection
+            Detailing</a>
+          <a href="estimation-mto.html" class="block text-gray-300 hover:text-primary-400">Estimation & MTO</a>
+          <a href="qa-shop-drawing-review.html" class="block text-gray-300 hover:text-primary-400">QA Review</a>
+        </div>
+        <a href="about.html" class="block text-white font-medium">About</a>
+        <a href="request-quote.html"
+          class="block w-full text-center bg-primary-600 text-white py-3 rounded-lg font-bold">Request Quote</a>
+      </div>
+    </div>
+  </header>
 
-<!-- ================= HERO ================= -->
-<section class="pt-28 bg-cover bg-center"
-  style="background-image:url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80')">
-  <div class="bg-gradient-to-r from-black/80 via-black/50 to-black/80">
-    <div class="max-w-6xl mx-auto px-6 py-24 text-white">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        Estimation & Material Take-Off
+  <!-- ================= HERO ================= -->
+  <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-dark-900/90 mix-blend-multiply z-10"></div>
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80"
+        alt="Estimation" class="w-full h-full object-cover opacity-60">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-20 text-center">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-amber-500/30 text-amber-300 text-sm font-medium mb-6 reveal active">
+        <span class="iconify" data-icon="ph:calculator-bold"></span> Cost Certainty
+      </div>
+      <h1 class="font-display text-5xl md:text-6xl font-bold mb-6 reveal active delay-100">
+        Estimation & <span class="text-gradient">Take-off</span>
       </h1>
-      <p class="text-lg max-w-4xl">
-        Accurate, model-based steel quantity take-offs and estimation support
-        to reduce bidding risk and improve procurement confidence.
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed reveal active delay-200">
+        Accurate, model-based steel quantity take-offs. Reduce bidding risk and improve procurement confidence
+        with precise, data-backed estimates.
       </p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= OVERVIEW ================= -->
-<section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-14 items-center">
-  <div>
-    <h2 class="text-3xl font-bold text-blue-900 mb-6">
-      Service Overview
-    </h2>
-    <p class="text-lg text-gray-700">
-      We provide accurate steel quantity take-offs and estimation modeling to
-      support bidding, budgeting, and material planning. Our estimates are
-      developed directly from Tekla Structures and SDS/2 models, ensuring
-      consistency between quantities, fabrication drawings, and shop workflows.
-    </p>
-  </div>
+  <!-- ================= OVERVIEW ================= -->
+  <section class="py-20 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <div class="reveal">
+      <h2 class="font-display text-3xl font-bold mb-6">Bid with <span class="text-amber-400">Confidence</span></h2>
+      <p class="text-gray-400 text-lg leading-relaxed mb-6">
+        We develop our estimates directly from Tekla Structures and SDS/2 models, ensuring consistency between
+        quantities, fabrication drawings, and shop workflows. This means fewer surprises and more winning bids.
+      </p>
+    </div>
+    <div class="reveal delay-100">
+      <div class="relative rounded-2xl overflow-hidden glass p-2 border border-white/10">
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80"
+          alt="Bidding" class="rounded-xl w-full h-auto hover:scale-105 transition-transform duration-500">
+      </div>
+    </div>
+  </section>
 
-  <img
-    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80"
-    alt="Steel estimation work"
-    class="rounded-lg shadow-lg">
-</section>
+  <!-- ================= SCOPE ================= -->
+  <section class="py-20 bg-dark-800 relative">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-display text-4xl font-bold">Scope of <span class="text-amber-400">Work</span></h2>
+      </div>
 
-<!-- ================= SCOPE OF WORK ================= -->
-<section class="bg-gray-50 py-20">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-blue-900 mb-12">
-      Scope of Work
-    </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+        <!-- Card 1 -->
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center text-amber-400 mb-6">
+            <span class="iconify text-3xl" data-icon="ph:clipboard-text-bold"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Quantity Surveying</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• Drawing & Spec Review</li>
+            <li>• Bluebeam Quality Checks</li>
+            <li>• Identification of Steel Types</li>
+            <li>• Preliminary 3D Modeling</li>
+          </ul>
+        </div>
 
-    <div class="grid md:grid-cols-3 gap-10">
+        <!-- Card 2 -->
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal delay-100">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-white mb-6">
+            <span class="iconify text-3xl" data-icon="ph:chart-bar-bold"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Reporting</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• MTO Reports</li>
+            <li>• Weight Summaries</li>
+            <li>• Bill of Quantities (BOQ)</li>
+            <li>• Excel / CSV Exports</li>
+          </ul>
+        </div>
 
-      <div class="bg-white p-8 rounded-lg shadow">
-        <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:office-building"></span>
-        <h3 class="text-xl font-semibold mb-3">Structural Steel</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>• Review structural and architectural drawings</li>
-          <li>• Perform steel quantity take-offs using Bluebeam and 3D modeling tools</li>
-          <li>• Identify primary, secondary, and miscellaneous steel elements</li>
-          <li>• Generate preliminary 3D steel models for visualization and validation</li>
-          <li>• Prepare material take-off (MTO) and weight reports</li>
-          <li>• Assist in budget pricing and bid preparation</li>
-          <li>• Provide clarification support during tender stages</li>
+        <!-- Card 3 -->
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition reveal delay-200">
+          <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-400 mb-6">
+            <span class="iconify text-3xl" data-icon="ph:handshake-bold"></span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Bid Support</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• Budget Formatting</li>
+            <li>• Tender Clarifications</li>
+            <li>• Change Order review</li>
+            <li>• Value Engineering</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DELIVERABLES ================= -->
+  <section class="py-20 max-w-7xl mx-auto px-6">
+    <h2 class="font-display text-3xl font-bold mb-12 text-center reveal">What We <span
+        class="text-amber-400">Deliver</span></h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="glass p-8 rounded-2xl border-l-4 border-amber-500 reveal">
+        <h3 class="text-xl font-bold mb-3">Comprehensive Reports</h3>
+        <p class="text-gray-400 text-sm mb-4">Detailed Excel-based BOQs broken down by assembly, member type, and finish
+          requirements.</p>
+        <span class="iconify text-amber-500 text-3xl" data-icon="ph:files-bold"></span>
+      </div>
+
+      <div class="glass p-8 rounded-2xl border-l-4 border-primary-500 reveal delay-100">
+        <h3 class="text-xl font-bold mb-3">Model Validation</h3>
+        <p class="text-gray-400 text-sm mb-4">Every quantity is backed by a 3D model element, providing visual
+          verification of the scope.</p>
+        <span class="iconify text-primary-500 text-3xl" data-icon="ph:cube-bold"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOFTWARE ================= -->
+  <section class="py-20 bg-dark-800">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="font-display text-3xl font-bold mb-10">Software Stack</h2>
+      <div class="flex flex-wrap justify-center gap-8">
+        <div class="glass px-8 py-6 rounded-xl flex items-center gap-4 reveal">
+          <span class="iconify text-4xl text-white" data-icon="simple-icons:trimble"></span>
+          <span class="text-xl font-bold">Tekla Structures</span>
+        </div>
+        <div class="glass px-8 py-6 rounded-xl flex items-center gap-4 reveal delay-100">
+          <span class="iconify text-4xl text-white" data-icon="mdi:cube-outline"></span>
+          <span class="text-xl font-bold">SDS/2</span>
+        </div>
+        <div class="glass px-8 py-6 rounded-xl flex items-center gap-4 reveal delay-200">
+          <span class="iconify text-4xl text-white" data-icon="file-icons:microsoft-excel"></span>
+          <span class="text-xl font-bold">Excel</span>
+        </div>
+        <div class="glass px-8 py-6 rounded-xl flex items-center gap-4 reveal delay-300">
+          <span class="iconify text-4xl text-white" data-icon="ph:grid-four-bold"></span>
+          <span class="text-xl font-bold">Bluebeam</span>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- ================= CODES & STANDARDS ================= -->
+  <section class="py-20 bg-dark-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-3xl font-bold mb-10 text-primary-400 text-center">
+        Value to Clients 
+      </h2>
+
+      <div class="flex flex-wrap justify-center" style="gap: 15rem;">
+        <ul class="text-gray-400 space-y-2 text-sm">
+          <li>• Accurate, model-driven quantities </li>
+          <li>• Faster turnaround for bid deadlines </li>
+        </ul>
+        <ul class="text-gray-400 space-y-2 text-sm">
+          <li>• Reduced bidding and procurement risk</li>
+          <li>• Consistency with fabrication models</li>
         </ul>
       </div>
-
-
     </div>
-  </div>
-</section>
+  </section>
+  <!-- ================= CTA ================= -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-primary-400">
+        Need Estimation or MTO Support?
+      </h2>
 
-<!-- ================= DELIVERABLES ================= -->
-<section class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold text-blue-900 mb-12">
-    Estimation Deliverables
-  </h2>
+      <p class="mt-4 text-lg">
+        Share your project drawings and scope. Our team will review your
+        requirements and respond within one business day.
+      </p>
 
-  <div class="grid md:grid-cols-2 gap-12">
-
-    <div class="flex gap-5">
-      <span class="iconify text-4xl text-blue-900" data-icon="mdi:file-table-outline"></span>
-      <ul class="space-y-3 text-lg text-gray-700">
-        <li>Material Take-Off (MTO) reports</li>
-        <li>Weight summaries by member and assembly</li>
-        <li>Excel-based Bills of Quantities (BOQs)</li>
-      </ul>
+      <a href="request-quote.html"
+        class="inline-block mt-8 bg-blue-900 text-white px-10 py-3 rounded-lg text-lg font-semibold hover:bg-blue-800 transition">
+        Request a Quote
+      </a>
     </div>
-
-    <div class="flex gap-5">
-      <span class="iconify text-4xl text-blue-900" data-icon="mdi:database-check-outline"></span>
-      <ul class="space-y-3 text-lg text-gray-700">
-        <li>Model-backed quantity validation</li>
-        <li>Consistency checks against drawings</li>
-        <li>CSV / Excel output formats</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= SOFTWARE ================= -->
-<section class="bg-gray-50 py-20">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-blue-900 mb-10">
-      Software & Tools Used
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-10">
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <h3 class="text-xl font-semibold mb-2">Tekla Structures</h3>
-        <p class="text-gray-700">
-          Model-based quantity extraction and weight calculations
-          directly from fabrication-ready models.
-        </p>
+  </section>
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-dark-900 border-t border-white/10 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <a href="index.html" class="block mb-4">
+            <img src="assets/logo.png" alt="Lattice Steel" style="width: 150px; height: 150px;" class="h-10 w-auto object-contain">
+          </a>
+          <p class="text-gray-400 text-sm max-w-xs leading-relaxed">
+            Professional U.S.-standard steel detailing services.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-6">Services</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="qa-shop-drawing-review.html" class="hover:text-primary-400">QA Services</a></li>
+            <li><a href="connection-detailing.html" class="hover:text-primary-400">Connection Design</a></li>
+            <li><a href="structural-steel.html" class="hover:text-primary-400">Structural Steel</a></li>
+            <li><a href="miscellaneous-steel-detailing.html" class="hover:text-primary-400">Misc. Detailing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-6">Company</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="about.html" class="hover:text-primary-400">About Us</a></li>
+            <li><a href="request-quote.html" class="hover:text-primary-400">Get Quote</a></li>
+            <li><a href="privacy-policy.html" class="hover:text-primary-400">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html" class="hover:text-primary-400 transition">Terms &
+                                Conditions</a></li>
+          </ul>
+        </div>
       </div>
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <h3 class="text-xl font-semibold mb-2">SDS/2</h3>
-        <p class="text-gray-700">
-          Estimation modeling aligned with shop drawings
-          and fabrication workflows.
-        </p>
+      <div class="border-t border-white/5 pt-8 text-center text-gray-600 text-sm">
+        <p>&copy; 2024 Lattice Steel. All rights reserved.</p>
       </div>
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <h3 class="text-xl font-semibold mb-2">Excel / CSV</h3>
-        <p class="text-gray-700">
-          Clean, organized output formats for procurement,
-          pricing, and review.
-        </p>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow">
-        <h3 class="text-xl font-semibold mb-2">Blue Beam</h3>
-        <p class="text-gray-700">
-          Precise quantity take-offs and 
-          cost planning directly from project drawings.
-        </p>
-      </div>
-      
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ================= USE CASES ================= -->
-<section class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold text-blue-900 mb-12">
-    Typical Use Cases
-  </h2>
-
-  <div class="grid md:grid-cols-2 gap-8 text-lg text-gray-700">
-
-    <div class="flex gap-4">
-      <span class="iconify text-3xl text-blue-900" data-icon="mdi:clipboard-text-outline"></span>
-      Pre-bid estimation and bid support
-    </div>
-
-    <div class="flex gap-4">
-      <span class="iconify text-3xl text-blue-900" data-icon="mdi:cash-check"></span>
-      Budget validation and cost planning
-    </div>
-
-    <div class="flex gap-4">
-      <span class="iconify text-4xl text-blue-900 mb-4" data-icon="mdi:factory"></span>
-      Change order evaluation
-    </div>
-
-    <div class="flex gap-4">
-      <span class="iconify text-3xl text-blue-900" data-icon="mdi:chart-line"></span>
-      Design development estimates
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= VALUE ================= -->
-<section class="bg-blue-900 text-white py-20">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-12">
-      Value to Clients
-    </h2>
-
-    <div class="grid md:grid-cols-2 gap-8 text-lg">
-
-      <div class="flex gap-4">
-        <span class="iconify text-3xl" data-icon="mdi:check-circle-outline"></span>
-        Accurate, model-driven quantities
-      </div>
-
-      <div class="flex gap-4">
-        <span class="iconify text-3xl" data-icon="mdi:check-circle-outline"></span>
-        Reduced bidding and procurement risk
-      </div>
-
-      <div class="flex gap-4">
-        <span class="iconify text-3xl" data-icon="mdi:check-circle-outline"></span>
-        Faster turnaround for bid deadlines
-      </div>
-
-      <div class="flex gap-4">
-        <span class="iconify text-3xl" data-icon="mdi:check-circle-outline"></span>
-        Consistency with fabrication models
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= CTA ================= -->
-<section class="bg-gray-100 py-16">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-blue-900">
-      Need Estimation or MTO Support?
-    </h2>
-    <p class="mt-4 text-lg">
-      Share your drawings or models. Our team will review your requirements
-      and respond within one business day.
-    </p>
-
-    <a href="request-quote.html"
-      class="inline-block mt-8 bg-blue-900 text-white px-10 py-3 rounded-lg text-lg font-semibold hover:bg-blue-800 transition">
-      Request a Quote
-    </a>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<div id="footer"></div>
-
-<!-- ================= LOAD HEADER & FOOTER ================= -->
-<script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
-
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>
-
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const icon = menuBtn.querySelector('.iconify');
+      icon.setAttribute('data-icon', mobileMenu.classList.contains('open') ? 'ph:x-bold' : 'ph:list-bold');
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
+
 </html>
-
-
